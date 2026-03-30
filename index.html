@@ -282,7 +282,7 @@ const SHOWS = {
   DOAC:{name:'Diary of a CEO',  host:'Steven Bartlett', color:'#E84E14', abbr:'DC',
         topics:'Neuroscience · Business · Psychology · Sports Science · Exercise · Sex/Relationships · AI · Power · Fertility · Physical Health'},
   BA:  {name:'Begin Again',     host:'Davina McCall',   color:'#00A88A', abbr:'BA',
-        topics:'Health & Wellness · Resilience · Parenting · Midlife · Addiction · Sex · Grief & Trauma · Brain Health · Psychedelics · Life Story'},
+        topics:'Health & Wellness · Resilience · Parenting · Midlife · Addiction · Sex · Grief & Trauma · Brain Health · Life Story'},
   WNT: {name:'We Need to Talk', host:'Paul Brunson',    color:'#8B35D6', abbr:'WT',
         topics:'Sex · Relationships · Grief/Trauma · Love · Neuroscience · Dating · Status · Mental Health · Addiction · Life Story'},
   TL:  {name:'The Line',        host:'Dr K. Holmes',    color:'#0284C7', abbr:'TL',
@@ -319,7 +319,7 @@ const CALENDAR = {
       {e:'12 Jan', n:'Cervical Cancer Prevention Week (UK)',
        c:'awareness', src:"Jo's Cervical Cancer Trust", sp:'12–18 Jan',
        s:['BA','WNT'],
-       w:"BA: women's health/end of life · WNT: women's health/relationships"},
+       w:"BA: health & wellness/women's health · WNT: women's health/relationships"},
 
       {e:'15 Jan', n:'Australian Open Tennis',
        c:'sports', src:'Olympics.com', sp:'15 Jan – 1 Feb',
@@ -385,8 +385,8 @@ const CALENDAR = {
 
       {e:'1 Feb', n:'Black History Month begins (US/Canada)',
        c:'awareness', src:'UN / Brandwatch',
-       s:['HSR','WNT','BA'],
-       w:'HSR: power/culture · WNT: status/life story · BA: activist/feminist'},
+       s:['HSR','WNT'],
+       w:'HSR: power/culture · WNT: status/life story'},
 
       {e:'2 Feb', n:'World Wetlands Day — UN/UNESCO',
        c:'awareness', src:'UN.org',
@@ -396,7 +396,7 @@ const CALENDAR = {
       {e:'4 Feb', n:'World Cancer Day — WHO',
        c:'awareness', src:'WHO / UN.org',
        s:['BA','WNT','DOAC'],
-       w:'BA: end of life/health · WNT: grief/life story · DOAC: physical health'},
+       w:'BA: health & wellness/grief & trauma · WNT: grief/life story · DOAC: physical health'},
 
       {e:'5 Feb', n:'Time to Talk Day (UK Mental Health)',
        c:'awareness', src:'Mind.org',
@@ -410,8 +410,8 @@ const CALENDAR = {
 
       {e:'6 Feb', n:"International Day of Zero Tolerance for FGM — UN/WHO",
        c:'awareness', src:'UN.org / WHO',
-       s:['BA','WNT','HSR'],
-       w:"BA: activist/feminist · WNT: women's wellbeing/trauma · HSR: women's empowerment"},
+       s:['WNT','HSR'],
+       w:"WNT: women\'s wellbeing/trauma · HSR: women\'s empowerment"},
 
       {e:'8 Feb', n:"Super Bowl LX — Levi's Stadium, Santa Clara",
        c:'sports', src:'Olympics.com',
@@ -436,17 +436,17 @@ const CALENDAR = {
       {e:'17 Feb', n:'Florence + the Machine — UK Arena Tour',
        c:'music', src:'Ticketmaster UK', sp:'Feb–Aug',
        s:['BA'],
-       w:'BA: resilience/grief & trauma/feminist themes throughout her work'},
+       w:'BA: resilience/grief & trauma — her work runs through loss, trauma and emotional intensity'},
 
       {e:'17 Feb', n:'RAYE — UK Arena Tour',
        c:'music', src:'Ticketmaster UK', sp:'17–27 Feb',
        s:['BA'],
-       w:'BA: feminist/resilience themes — her story of industry exploitation and reclaiming power'},
+       w:'BA: resilience/life story — her story of reclaiming her voice after industry exploitation'},
 
       {e:'20 Feb', n:'World Day of Social Justice — UN',
        c:'awareness', src:'UN.org',
-       s:['HSR','WNT','BA'],
-       w:'HSR: power/status · WNT: status/life story · BA: activist/feminist'},
+       s:['HSR','WNT'],
+       w:'HSR: power/status · WNT: status/life story'},
 
       {e:'21 Feb', n:'International Mother Language Day — UNESCO',
        c:'awareness', src:'UNESCO',
@@ -476,12 +476,12 @@ const CALENDAR = {
       {e:'Feb', n:'LGBTQ+ History Month (UK)',
        c:'theme', src:'LGBT+ History Month UK',
        s:['WNT','BA'],
-       w:'WNT: relationships/identity/life story · BA: activist/feminist'},
+       w:'WNT: relationships/identity/life story · BA: life story/resilience — highly relevant to BA\'s predominantly female audience'},
 
       {e:'Feb', n:'Rare Disease Day (28 Feb)',
        c:'awareness', src:'rarediseaseday.org',
        s:['BA'],
-       w:'BA: health/end of life · DOAC: physical health/neuroscience'},
+       w:'BA: health & wellness · DOAC: physical health/neuroscience'},
 
       // ── RETAIL ──
       {e:'7 Feb', n:"Valentine's Week — Gifting Peak (UK £1.4bn)",
@@ -512,8 +512,8 @@ const CALENDAR = {
     events:[
       {e:'1 Mar', n:'Zero Discrimination Day — UNAIDS',
        c:'awareness', src:'UN.org / UNAIDS',
-       s:['WNT','BA','HSR'],
-       w:'WNT: equality/life story · BA: activist/feminist · HSR: power/empowerment'},
+       s:['WNT','HSR'],
+       w:'WNT: equality/life story · HSR: power/empowerment'},
 
       {e:'1 Mar', n:'Self-Injury Awareness Day',
        c:'awareness', src:'Mind / Mental Health UK',
@@ -527,13 +527,13 @@ const CALENDAR = {
 
       {e:'5 Mar', n:'GLAAD Media Awards',
        c:'industry', src:'GLAAD / UPI',
-       s:['WNT','BA'],
-       w:'WNT: relationships/identity · BA: activist/feminist'},
+       s:['WNT'],
+       w:'WNT: relationships/identity'},
 
       {e:'8 Mar', n:"International Women's Day — UN",
        c:'awareness', src:'UN.org',
        s:['DOAC','BA','WNT','HSR','TL'],
-       w:'DOAC: power/authority · BA: feminist/activist · WNT: status/empowerment · HSR: core mission · TL: female high performers'},
+       w:'DOAC: power/authority · BA: resilience/life story — women overcoming barriers · WNT: status/empowerment · HSR: core mission · TL: female high performers'},
 
       {e:'12 Mar', n:'University Mental Health Day (UK)',
        c:'awareness', src:'Student Minds',
@@ -582,8 +582,8 @@ const CALENDAR = {
 
       {e:'21 Mar', n:"Int'l Day for Elimination of Racial Discrimination — UN",
        c:'awareness', src:'UN.org',
-       s:['HSR','WNT','BA'],
-       w:'HSR: power/culture · WNT: status/life story · BA: activist/feminist'},
+       s:['HSR','WNT'],
+       w:'HSR: power/culture · WNT: status/life story'},
 
       {e:'21 Mar', n:'World Poetry Day — UNESCO',
        c:'awareness', src:'UNESCO',
@@ -598,7 +598,7 @@ const CALENDAR = {
       {e:'24 Mar', n:'World Tuberculosis Day — WHO',
        c:'awareness', src:'WHO / UN.org',
        s:['BA','DOAC'],
-       w:'BA: health/end of life · DOAC: physical health'},
+       w:'BA: health & wellness · DOAC: physical health'},
 
       {e:'26 Mar', n:'Purple Day — Epilepsy Awareness',
        c:'awareness', src:'Epilepsy Society',
@@ -613,12 +613,12 @@ const CALENDAR = {
       {e:'31 Mar', n:'Trans Day of Visibility',
        c:'awareness', src:'nationaltoday.com',
        s:['WNT','BA','HSR'],
-       w:'WNT: identity/relationships · BA: activist/feminist · HSR: power/culture'},
+       w:'WNT: identity/relationships · BA: life story/resilience — resonates with BA\'s female audience · HSR: power/culture'},
 
       {e:'Mar', n:"Women's History Month",
        c:'theme', src:'UN / Brandwatch',
        s:['HSR','BA','WNT','DOAC'],
-       w:'HSR: core mission · BA: feminist/activist · WNT: empowerment/status · DOAC: power/authority'},
+       w:"HSR: core mission · BA: resilience/life story — celebrating women's journeys · WNT: empowerment/status · DOAC: power/authority"},
 
       {e:'Mar', n:'Endometriosis Awareness Month',
        c:'theme', src:'Endometriosis UK',
@@ -637,8 +637,8 @@ const CALENDAR = {
 
       {e:'6 Mar', n:'The Bride! — Maggie Gyllenhaal',
        c:'film', src:'Hollywood Reporter / RottenTomatoes',
-       s:['BA'],
-       w:"HSR: female director/female-led story · BA: feminist/women's story"},
+       s:[],
+       w:''},
 
       {e:'27 Mar', n:'Peaky Blinders: The Immortal Man',
        c:'film', src:'IMDb / cinemablend',
@@ -663,8 +663,8 @@ const CALENDAR = {
 
       {e:'24 Mar', n:"Equal Pay Day (US) — Women's Earnings Awareness",
        c:'awareness', src:'AAUW / nationalwomenslaw.org',
-       s:['HSR','WNT','BA'],
-       w:'HSR: female entrepreneurship/wealth gap — Equal Pay Day marks how far into the year women must work to earn what men made the year before. Core HSR territory · WNT: status/equality · BA: feminist/activist'},
+       s:['HSR','WNT'],
+       w:'HSR: female entrepreneurship/wealth gap · WNT: status/equality'},
 
       {e:'Mar', n:"Women's History Month — Female Brand Partnerships",
        c:'retail', src:'IAB / Nielsen',
@@ -785,7 +785,7 @@ const CALENDAR = {
       {e:'Apr', n:'Sexual Assault Awareness Month (US)',
        c:'awareness', src:'RAINN.org',
        s:['WNT','BA','HSR'],
-       w:'WNT: trauma/relationships · BA: grief & trauma/feminist · HSR: power/safety'},
+       w:'WNT: trauma/relationships · BA: grief & trauma/resilience · HSR: power/safety'},
 
       // ── RETAIL ──
       {e:'3 Apr', n:"Easter Gifting Window",
@@ -827,7 +827,7 @@ const CALENDAR = {
       {e:'27 May', n:'National Reconciliation Week (Australia)',
        c:'awareness', src:'reconciliation.org.au', sp:'27 May – 3 Jun',
        s:['BA','WNT'],
-       w:'BA: activist/life story — key awareness week for Australian audience covering First Nations justice and healing · WNT: life story/status/cultural identity'},
+       w:'BA: life story — significant for Australian audience, covering First Nations healing and shared history · WNT: life story/status/cultural identity'},
 
 {e:'11 May', n:'Mental Health Awareness Week (UK) — MHF',
        c:'awareness', src:'mentalhealth.org.uk', sp:'11–17 May',
@@ -846,8 +846,8 @@ const CALENDAR = {
 
       {e:'17 May', n:"IDAHOBIT — Int'l Day Against LGBTQ+ Discrimination",
        c:'awareness', src:'ILGA / nationaltoday.com',
-       s:['WNT','BA','HSR'],
-       w:'WNT: identity/relationships · BA: activist/feminist · HSR: power/culture'},
+       s:['WNT','HSR'],
+       w:'WNT: identity/relationships · HSR: power/culture'},
 
       {e:'19 May', n:'Cannes Film Festival — Opening',
        c:'industry', src:'festival-cannes.com', sp:'19–30 May',
@@ -867,7 +867,7 @@ const CALENDAR = {
       {e:'22 May', n:"Int'l Day to End Obstetric Fistula — UN",
        c:'awareness', src:'UN.org',
        s:['BA','WNT'],
-       w:"BA: women's health/activist · WNT: women's wellbeing/trauma"},
+       w:"BA: health & wellness/women's health · WNT: women's wellbeing/trauma"},
 
       {e:'25 May', n:'French Open Tennis begins',
        c:'sports', src:'Olympics.com', sp:'25 May – 7 Jun',
@@ -934,7 +934,7 @@ const CALENDAR = {
 {e:'1 Jun', n:'Pride Month Begins (Global)',
        c:'awareness', src:'nationaltoday.com / Brandwatch',
        s:['WNT','BA','HSR'],
-       w:'WNT: relationships/identity/love · BA: activist/feminist · HSR: power/culture'},
+       w:'WNT: relationships/identity/love · BA: life story/resilience — key cultural moment for BA\'s audience · HSR: power/culture'},
 
       {e:'1 Jun', n:'Global Day of Parents — UN',
        c:'awareness', src:'UN.org',
@@ -999,7 +999,7 @@ const CALENDAR = {
       {e:'19 Jun', n:"Int'l Day for Elimination of Sexual Violence in Conflict — UN",
        c:'awareness', src:'UN.org',
        s:['WNT','BA','HSR'],
-       w:'WNT: trauma/abuse · BA: grief & trauma/feminist · HSR: power/safety'},
+       w:'WNT: trauma/abuse · BA: grief & trauma/resilience · HSR: power/safety'},
 
       {e:'19 Jun', n:'Disclosure Day — Steven Spielberg',
        c:'film', src:'cinemablend',
@@ -1028,8 +1028,8 @@ const CALENDAR = {
 
       {e:'19 Jun', n:'Supergirl — Milly Alcock, DC',
        c:'film', src:'cinemablend',
-       s:['BA'],
-       w:'BA: feminist/activist — female-led story with strong empowerment themes'},
+       s:[],
+       w:''},
 
       {e:'26 Jun', n:"Masters of the Universe",
        c:'film', src:'Hollywood Reporter',
@@ -1038,8 +1038,8 @@ const CALENDAR = {
 
       {e:'19 Jun', n:"Juneteenth — US National Holiday",
        c:'awareness', src:'US Federal Calendar / Brandwatch',
-       s:['HSR','WNT','BA'],
-       w:"HSR: power/culture/Black female entrepreneurship — Juneteenth has become a major moment for celebrating Black-owned businesses and female founders · WNT: life story/status · BA: activist/feminist"},
+       s:['HSR','WNT'],
+       w:"HSR: power/culture/Black female entrepreneurship · WNT: life story/status"},
 
       {e:'26 Jun', n:"Int'l Day Against Drug Abuse & Trafficking — UN",
        c:'awareness', src:'UN.org',
@@ -1059,7 +1059,7 @@ const CALENDAR = {
       {e:'Jun', n:"Alzheimer's & Brain Awareness Month",
        c:'theme', src:'Alzheimers.org',
        s:['BA','WNT','DOAC','TL'],
-       w:"BA: brain health/end of life · WNT: mental health/life story · DOAC: neuroscience · TL: cognitive performance"},
+       w:'BA: brain health — directly relevant to the show\'s brain health focus · WNT: mental health/life story · DOAC: neuroscience · TL: cognitive performance'},
 
       {e:'Jun', n:'Tony Awards (New York)',
        c:'industry', src:'TonyAwards.com',
@@ -1096,7 +1096,7 @@ const CALENDAR = {
             {e:'5 Jul', n:'NAIDOC Week (Australia)',
        c:'awareness', src:'naidoc.org.au', sp:'5–12 Jul',
        s:['BA','WNT'],
-       w:'BA: activist/feminist/life story — one of the most significant cultural awareness weeks for Australian audiences, celebrating First Nations people · WNT: life story/cultural identity/status'},
+       w:'BA: life story — one of the most significant cultural weeks for BA\'s Australian audience · WNT: life story/cultural identity/status'},
 
 {e:'4 Jul', n:'Independence Day (US)',
        c:'awareness', src:'national calendars',
@@ -1130,8 +1130,8 @@ const CALENDAR = {
 
       {e:'18 Jul', n:'Nelson Mandela International Day — UN',
        c:'awareness', src:'UN.org',
-       s:['HSR','WNT','BA','DOAC'],
-       w:'HSR: power/cultural icon · WNT: life story/resilience · BA: activist/feminist · DOAC: power/authority'},
+       s:['HSR','WNT','DOAC'],
+       w:'HSR: power/cultural icon · WNT: life story/resilience · DOAC: power/authority'},
 
       {e:'19 Jul', n:'FIFA World Cup Final — MetLife Stadium, New York',
        c:'sports', src:'FIFA.com',
@@ -1161,7 +1161,7 @@ const CALENDAR = {
       {e:'30 Jul', n:'World Day Against Trafficking in Persons — UN',
        c:'awareness', src:'UN.org',
        s:['WNT','BA','HSR'],
-       w:'WNT: trauma/abuse · BA: feminist/activist · HSR: power/safety/women'},
+       w:'WNT: trauma/abuse · BA: grief & trauma/resilience · HSR: power/safety/women'},
 
       {e:'Jul', n:'Disability Pride Month',
        c:'theme', src:'nationaltoday.com',
@@ -1218,7 +1218,7 @@ const CALENDAR = {
       {e:'Aug', n:'Ariana Grande — Eternal Sunshine Tour · The O2, London',
        c:'music', src:'Ticketmaster UK', sp:'10 nights at The O2, August',
        s:['WNT','BA'],
-       w:'WNT: grief/relationships/love/trauma survivor · BA: grief & trauma/resilience/feminist'},
+       w:'WNT: grief/relationships/love/trauma survivor · BA: grief & trauma/resilience'},
 
       {e:'7 Aug', n:'Harry Potter — 25th Anniversary Re-release',
        c:'film', src:'Movie Insider',
@@ -1227,8 +1227,8 @@ const CALENDAR = {
 
       {e:'26 Aug', n:"Women's Equality Day (US)",
        c:'awareness', src:'US Congress / womensequality.org',
-       s:['HSR','BA','WNT'],
-       w:"HSR: female empowerment/power — commemorates the 19th Amendment granting women the right to vote. One of the most significant US dates for female ambition and business · BA: feminist/activist · WNT: empowerment/status"},
+       s:['HSR','WNT','BA'],
+       w:"HSR: female empowerment/power · WNT: empowerment/status · BA: life story/resilience — deeply relevant to BA\'s female audience"},
 
       {e:'9 Aug', n:"International Day of Indigenous Peoples — UN",
        c:'awareness', src:'UN.org',
@@ -1263,7 +1263,7 @@ const CALENDAR = {
       {e:'30 Aug', n:'Notting Hill Carnival — London',
        c:'music', src:'Ticketmaster / NHS Employers', sp:'30–31 Aug',
        s:['BA','WNT'],
-       w:'BA: activist/community · WNT: life story/cultural identity'},
+       w:'BA: life story/community · WNT: life story/cultural identity'},
 
       {e:'31 Aug', n:'US Open Tennis Begins',
        c:'sports', src:'Olympics.com', sp:'31 Aug – 13 Sep',
@@ -1350,7 +1350,7 @@ const CALENDAR = {
       {e:'21 Sep', n:"World Alzheimer's Day",
        c:'awareness', src:'Alzheimers Disease International',
        s:['BA','WNT','DOAC'],
-       w:"BA: brain health/end of life · WNT: grief/life story · DOAC: neuroscience"},
+       w:'BA: brain health — Alzheimer\'s directly covers brain health and resilience · WNT: grief/life story · DOAC: neuroscience'},
 
       {e:'21 Sep', n:'International Happiness at Work Week',
        c:'awareness', src:'mindsahead.org.uk', sp:'21–25 Sep',
@@ -1365,7 +1365,7 @@ const CALENDAR = {
             {e:'26 Sep', n:'AFL Grand Final — Melbourne',
        c:'sports', src:'AFL.com.au',
        s:['TL','BA','WNT'],
-       w:"TL: elite performance — Australia's biggest domestic sporting event, watched by millions of the show's Australian audience · BA: community/resilience · WNT: life story/community"},
+       w:"TL: elite performance — Australia\'s biggest domestic sporting event · BA: resilience/community · WNT: life story/community"},
 
       {e:'Sep', n:'Suicide Prevention Month',
        c:'theme', src:'WHO / Mental Health UK',
@@ -1390,7 +1390,7 @@ const CALENDAR = {
       {e:'Sep', n:'Robyn — The Sexistential Tour · UK Arena Dates',
        c:'music', src:'Ticketmaster UK',
        s:['WNT','BA'],
-       w:'WNT: heartbreak/relationships/independence/identity · BA: feminist/resilience/life story'},
+       w:'WNT: heartbreak/relationships/independence/identity · BA: resilience/life story'},
 
       // ── RETAIL ──
       {e:'Sep', n:"Back to Work — Courses, Subscriptions & Self-Improvement Peak",
@@ -1432,7 +1432,7 @@ const CALENDAR = {
 {e:'1 Oct', n:'International Day of Older Persons — UN',
        c:'awareness', src:'UN.org',
        s:['BA','WNT','DOAC'],
-       w:'BA: midlife/end of life · WNT: life story/relationships · DOAC: physical health/psychology'},
+       w:'BA: midlife/resilience · WNT: life story/relationships · DOAC: physical health/psychology'},
 
       {e:'2 Oct', n:'Verity — Colleen Hoover adaptation',
        c:'film', src:'Movie Insider / cinemablend',
@@ -1451,8 +1451,8 @@ const CALENDAR = {
 
       {e:'11 Oct', n:'International Day of the Girl — UN',
        c:'awareness', src:'UN.org',
-       s:['HSR','BA','WNT'],
-       w:'HSR: female empowerment (core) · BA: activist/feminist · WNT: identity/empowerment'},
+       s:['HSR','WNT','BA'],
+       w:'HSR: female empowerment (core) · WNT: identity/empowerment · BA: parenting/life story — resonates with BA\'s audience of mothers and women'},
 
       {e:'12 Oct', n:'OCD Awareness Week (UK)',
        c:'awareness', src:'OCD UK / mindsahead.org.uk', sp:'12–18 Oct',
@@ -1477,7 +1477,7 @@ const CALENDAR = {
       {e:'29 Oct', n:'World Stroke Day',
        c:'awareness', src:'WSO / daysoftheyear.com',
        s:['BA','DOAC','TL'],
-       w:'BA: brain health/end of life · DOAC: neuroscience · TL: human performance/health'},
+       w:'BA: brain health · DOAC: neuroscience · TL: human performance/health'},
 
       {e:'31 Oct', n:'Halloween',
        c:'awareness', src:'daysoftheyear.com',
@@ -1491,13 +1491,13 @@ const CALENDAR = {
 
       {e:'Oct', n:'Black History Month (UK)',
        c:'theme', src:'Black History Month UK',
-       s:['WNT','DOAC','BA'],
-       w:'WNT: life story/status · DOAC: business/culture · BA: activist/feminist'},
+       s:['WNT','DOAC'],
+       w:'WNT: life story/status · DOAC: business/culture'},
 
       {e:'Oct', n:'Breast Cancer Awareness Month',
        c:'theme', src:'Breast Cancer Now / WHO',
        s:['BA','WNT','HSR','DOAC'],
-       w:"BA: women's health/end of life (core) · WNT: grief/life story · HSR: women's empowerment · DOAC: physical health/hormones"},
+       w:"BA: health & wellness/women\'s health — one of the most significant health awareness months for BA\'s audience · WNT: grief/life story · HSR: women\'s empowerment · DOAC: physical health/hormones"},
 
       {e:'Oct', n:'ADHD Awareness Month',
        c:'theme', src:'CHADD / ADHD UK',
@@ -1512,7 +1512,7 @@ const CALENDAR = {
       {e:'Oct', n:'Arlo Parks — DESIRE TOUR · UK Dates',
        c:'music', src:'Ticketmaster UK', sp:'Glasgow, Bristol, Manchester, London',
        s:['WNT','BA'],
-       w:'WNT: LGBTQ+ identity/relationships/mental health/life story — her work covers all of these intimately · BA: grief & trauma/resilience/feminist/activist'},
+       w:'WNT: LGBTQ+ identity/relationships/mental health/life story · BA: grief & trauma/resilience'},
 
       // ── RETAIL ──
       {e:'18 Oct', n:"World Menopause Day — Women's Health Product Window",
@@ -1603,13 +1603,13 @@ const CALENDAR = {
 
       {e:'20 Nov', n:'Trans Day of Remembrance',
        c:'awareness', src:'nationaltoday.com',
-       s:['WNT','BA'],
-       w:'WNT: identity/relationships · BA: activist/feminist'},
+       s:['WNT'],
+       w:'WNT: identity/relationships'},
 
       {e:'25 Nov', n:"Int'l Day to End Violence Against Women — UN",
        c:'awareness', src:'UN.org',
        s:['HSR','BA','WNT'],
-       w:'HSR: female safety/empowerment · BA: grief & trauma/feminist · WNT: trauma/relationships'},
+       w:'HSR: female safety/empowerment · BA: grief & trauma/resilience · WNT: trauma/relationships'},
 
       {e:'Nov', n:"Movember — Men's Health Month",
        c:'theme', src:'Movember.com',
@@ -1666,7 +1666,7 @@ const CALENDAR = {
       {e:'1 Dec', n:'World AIDS Day — UNAIDS/UN',
        c:'awareness', src:'UN.org / UNAIDS',
        s:['WNT','BA','DOAC'],
-       w:'WNT: relationships/sexual health · BA: health/activist · DOAC: physical health'},
+       w:'WNT: relationships/sexual health · BA: health & wellness · DOAC: physical health'},
 
       {e:'3 Dec', n:"Int'l Day of Persons with Disabilities — UN",
        c:'awareness', src:'UN.org',
@@ -1680,8 +1680,8 @@ const CALENDAR = {
 
       {e:'10 Dec', n:'Human Rights Day — UN',
        c:'awareness', src:'UN.org',
-       s:['DOAC','BA','WNT','HSR'],
-       w:'DOAC: power/authority · BA: activist/feminist · WNT: status/life story · HSR: power/culture'},
+       s:['DOAC','WNT','BA','HSR'],
+       w:'DOAC: power/authority · WNT: status/life story · BA: life story/resilience — broad relevance to BA\'s female audience · HSR: power/culture'},
 
       {e:'11 Dec', n:'Jumanji 3 — Dwayne Johnson / Kevin Hart',
        c:'film', src:'IMDb / RottenTomatoes',
@@ -1696,7 +1696,7 @@ const CALENDAR = {
       {e:'18 Dec', n:"International Migrants Day — UN",
        c:'awareness', src:'UN.org',
        s:['WNT','BA'],
-       w:'WNT: life story · BA: activist/life story'},
+       w:'WNT: life story · BA: life story'},
 
       {e:'25 Dec', n:'Dune: Part Three — Timothée Chalamet / Zendaya',
        c:'film', src:'IMDb / Hollywood Reporter',
