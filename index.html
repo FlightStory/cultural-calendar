@@ -18,6 +18,13 @@
   --cat-retail:#5B21B6;
 }
 html,body{height:100%;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow:hidden;}
+
+/* ── MOBILE HEADER (hidden on desktop) ── */
+.mobile-header{display:none;}
+
+/* ── SIDEBAR OVERLAY (mobile) ── */
+.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:99;}
+.sidebar-overlay.active{display:block;}
 .app{display:flex;height:100vh;}
 .sidebar{width:240px;min-width:240px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;}
 .main{flex:1;overflow:hidden;display:flex;flex-direction:column;}
@@ -114,11 +121,110 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'DM San
 ::-webkit-scrollbar{width:4px;}
 ::-webkit-scrollbar-track{background:transparent;}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+
+/* ══════════════════════════════════════════
+   MOBILE RESPONSIVE — 768px and below
+   ══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Allow body to scroll on mobile */
+  html,body{height:auto;overflow:auto;}
+
+  .app{flex-direction:column;height:auto;min-height:100vh;}
+
+  /* Sidebar becomes a slide-in drawer */
+  .sidebar{
+    position:fixed;top:0;left:-280px;width:280px;height:100%;
+    z-index:100;transition:left .28s ease;
+    border-right:1px solid var(--border);
+    overflow-y:auto;
+  }
+  .sidebar.open{left:0;}
+
+  /* Mobile top header bar */
+  .mobile-header{
+    display:flex;align-items:center;justify-content:space-between;
+    background:var(--surface);border-bottom:1px solid var(--border);
+    padding:14px 18px;flex-shrink:0;position:sticky;top:0;z-index:50;
+  }
+  .mobile-brand{
+    font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;
+    letter-spacing:.04em;color:var(--text);
+  }
+  .mobile-nav{display:flex;align-items:center;gap:10px;}
+  .mobile-menu-btn{
+    background:none;border:1px solid var(--border2);border-radius:7px;
+    padding:6px 12px;font-size:11px;font-family:'DM Sans',sans-serif;
+    font-weight:600;color:var(--text);cursor:pointer;
+    display:flex;align-items:center;gap:5px;
+  }
+  .mobile-month-display{
+    font-size:13px;font-weight:600;color:var(--muted);
+  }
+
+  /* Main content takes full width */
+  .main{flex:1;overflow:visible;min-width:0;}
+
+  /* Top bar adjustments */
+  .top-bar{padding:16px 18px 0;}
+  .month-hero{margin-bottom:10px;}
+  .month-display{font-size:36px;}
+  .month-display em{font-size:24px;}
+  .event-total{font-size:11px;}
+  .event-total strong{font-size:16px;}
+
+  .themes-row{padding-bottom:10px;gap:4px;}
+  .theme-pill{font-size:9px;padding:2px 8px;}
+
+  /* Filter bar scrolls horizontally */
+  .filter-bar{
+    padding:8px 18px;
+    flex-wrap:nowrap;overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    gap:5px;
+    scrollbar-width:none;
+  }
+  .filter-bar::-webkit-scrollbar{display:none;}
+  .filter-lbl{white-space:nowrap;flex-shrink:0;}
+  .cat-btn{flex-shrink:0;white-space:nowrap;padding:4px 10px;}
+
+  /* Events list */
+  .events-wrapper{padding:12px 18px 40px;overflow:visible;}
+  .events-list{gap:6px;}
+
+  /* Event cards */
+  .event-card{padding:10px 12px;gap:10px;}
+  .evt-date .d{font-size:18px;}
+  .evt-date .m{font-size:8px;}
+  .evt-sep{height:26px;}
+  .evt-name{font-size:12px;}
+  .cat-tag{font-size:8px;padding:2px 6px;}
+  .evt-span{font-size:9px;}
+  .evt-source{font-size:8px;}
+
+  /* Show pills — slightly smaller */
+  .show-pill{width:22px;height:22px;font-size:7px;}
+
+  /* Hide the desktop sidebar brand/sources (shown in mobile header instead) */
+  .sidebar .brand{padding:18px 16px 12px;}
+  .sidebar .source-badges{display:none;}
+}
 </style>
 </head>
 <body>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
 <div class="app">
-  <aside class="sidebar">
+
+  <!-- MOBILE HEADER — only visible on mobile -->
+  <div class="mobile-header">
+    <div class="mobile-brand">FlightStory</div>
+    <div class="mobile-nav">
+      <span class="mobile-month-display" id="mobileMonthDisplay">January</span>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰ Months</button>
+    </div>
+  </div>
+
+  <aside class="sidebar" id="sidebar">
     <div class="brand">
       <div class="brand-name">FlightStory</div>
       <div class="brand-sub">Cultural Calendar 2026</div>
@@ -176,7 +282,7 @@ const SHOWS = {
   DOAC:{name:'Diary of a CEO',  host:'Steven Bartlett', color:'#E84E14', abbr:'DC',
         topics:'Neuroscience · Business · Psychology · Sports Science · Exercise · Sex/Relationships · AI · Power · Fertility · Physical Health'},
   BA:  {name:'Begin Again',     host:'Davina McCall',   color:'#00A88A', abbr:'BA',
-        topics:'Health & Wellness · Resilience · Parenting · Midlife · Addiction · Sex · Grief & Trauma · Brain Health · Feminist · Psychedelics · End of Life'},
+        topics:'Health & Wellness · Resilience · Parenting · Midlife · Addiction · Sex · Grief & Trauma · Brain Health · Psychedelics · Life Story'},
   WNT: {name:'We Need to Talk', host:'Paul Brunson',    color:'#8B35D6', abbr:'WT',
         topics:'Sex · Relationships · Grief/Trauma · Love · Neuroscience · Dating · Status · Mental Health · Addiction · Life Story'},
   TL:  {name:'The Line',        host:'Dr K. Holmes',    color:'#0284C7', abbr:'TL',
@@ -1769,6 +1875,29 @@ function render() {
 }
 
 render();
+
+// ── MOBILE DRAWER ──
+const sidebar     = document.getElementById('sidebar');
+const overlay     = document.getElementById('sidebarOverlay');
+const menuBtn     = document.getElementById('mobileMenuBtn');
+const mobileMonth = document.getElementById('mobileMonthDisplay');
+
+function openSidebar()  { sidebar.classList.add('open');  overlay.classList.add('active'); }
+function closeSidebar() { sidebar.classList.remove('open'); overlay.classList.remove('active'); }
+
+if (menuBtn) menuBtn.addEventListener('click', openSidebar);
+if (overlay) overlay.addEventListener('click', closeSidebar);
+
+// Close drawer and update label when a month is tapped on mobile
+document.querySelectorAll('.month-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    closeSidebar();
+    if (mobileMonth) mobileMonth.textContent = CALENDAR[btn.dataset.month].label;
+  });
+});
+
+// Set initial mobile month label
+if (mobileMonth) mobileMonth.textContent = CALENDAR[activeMonth].label;
 </script>
 </body>
 </html>
